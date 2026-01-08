@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mi Librería - Zona Meta. Tu punto de partida para la superación personal y el conocimiento.">
+    <title>Mi Librería - Zona Meta</title>
+
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER SECTION
+         Contains logo and user account icon
+         ============================================ -->
+    <header>
+        <div class="header-left">
+            <h1 class="brand-name">Zona Meta</h1>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Cuenta de usuario">
+                <i class="far fa-user"></i>
+            </button>
+            <div class="header-logo-container">
+                <img src="assets/images/zona_meta_logo_red_1767889879981.png" alt="Zona Meta Logo Deporte">
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         NAVIGATION BAR
+         Left: Search form
+         Right: Menu items (Inicio, Tienda-online, Registro)
+         ============================================ -->
+    <nav>
+        <!-- Search form on the left -->
+        <div class="nav-search-container">
+            <form class="nav-search" role="search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" placeholder="Buscar libros, autores, ISBN..." aria-label="Buscar">
+            </form>
+        </div>
+
+        <!-- Navigation menu on the right -->
+        <ul class="nav-menu">
+            <li><a href="index.html">Tu librería</a></li>
+            <li><a href="tienda.html">Compra on-line</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+         MAIN CONTENT
+         Three main sections: Hero, Featured Products, Store Locator
+         ============================================ -->
+    <main>
+
+        <!-- ============================================
+             HERO SECTION - Presentation Zone
+             Welcome message with CTA and illustration
+             ============================================ -->
+        <section class="hero-section">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h2>Bienvenido a Zona Meta</h2>
+                    <p class="hero-tagline">Tu punto de partida para la superación.</p>
+                    <p class="hero-description">
+                        En Zona Meta, creemos que cada libro es una puerta hacia un mundo de posibilidades.
+                        Ya sea que busques aventura, conocimiento o simplemente una buena historia,
+                        nuestra selección cuidadosamente curada está diseñada para inspirarte y acompañarte
+                        en cada etapa de tu viaje. Desde grandes clásicos hasta las últimas novedades,
+                        aquí encontrarás el libro perfecto para ti.
+                    </p>
+                    <a href="tienda.html" class="btn-primary">Explorar catálogo</a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero_sports_book_new.png" alt="Ilustración de libros y creatividad">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FEATURED PRODUCTS SECTION
+             Grid of highlighted books and products
+             ============================================ -->
+        <section class="featured-section">
+            <h2 class="section-title">Libros y Artículos Destacados</h2>
+
+            <div style="max-width: 800px; margin: 0 auto; margin-bottom: 3rem;">
+                <h3 style="font-size: 1.5rem; color: #000; margin-bottom: 1rem; font-weight: 700;">La inspiración se
+                    entrena.</h3>
+                <p style="color: var(--text-dark); line-height: 1.6;">
+                    Sumérgete en nuestra selección de lecturas esenciales para atletas, aficionados y profesionales.
+                    Encontrarás desde las biografías más impactantes de leyendas deportivas y análisis de rendimiento,
+                    hasta
+                    las últimas guías sobre fitness, mindfulness y nutrición de vanguardia.
+                </p>
+            </div>
+
+            <!-- Product Grid using CSS Grid -->
+            <div class="product-grid">
+
+                <!-- Product Card 1 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/images/book_arte_movimiento_1767888939663.png" alt="El arte del movimiento">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">El arte del movimiento</h3>
+                        <p class="product-description">
+                            Domina tu mente,<br>domina el juego
+                        </p>
+                        <p class="product-price">21,99€</p>
+                    </div>
+                </article>
+
+                <!-- Product Card 2 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/images/book_energia_plena_1767888952746.png" alt="Energía Plena">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Energía Plena</h3>
+                        <p class="product-description">
+                            Mente en movimiento
+                        </p>
+                        <p class="product-price">18,50€</p>
+                    </div>
+                </article>
+
+                <!-- Product Card 3 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/images/book_energia_plena_1767888952746.png" alt="Pedalea tu cima">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pedalea tu cima</h3>
+                        <p class="product-description">
+                            Domina cada ascenso y<br>mejora tu resistencia.
+                        </p>
+                        <p class="product-price">24,95€</p>
+                    </div>
+                </article>
+
+                <!-- Product Card 4 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/images/book_mente_calma_1767888985559.png" alt="Mente en calma">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Mente en calma</h3>
+                        <p class="product-description">
+                            Encuentra el equilibrio y<br>potencia tu rendimiento.
+                        </p>
+                        <p class="product-price">16,99€</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+             STORE LOCATOR SECTION
+             Map and list of physical store locations
+             ============================================ -->
+        <section class="store-locator-section">
+            <div class="container">
+                <h2 class="section-title">Encuentra tu tienda más cercana</h2>
+                <p class="section-subtitle">Visítanos en alguna de nuestras librerías físicas y vive la experiencia
+                    completa</p>
+
+                <!-- Store Search Bar -->
+                <div class="store-search-container">
+                    <input type="text" placeholder="Buscar libros, autores, ISBN..." class="store-search-input">
+                    <button class="store-search-btn">Buscar</button>
+                </div>
+
+                <div class="store-locator-content">
+                    <!-- Map Container -->
+                    <div class="map-container">
+                        <img src="assets/images/map_granada_locations.png"
+                            alt="Mapa de tiendas: Maracena, Granada, Zaidín, Churriana">
+                    </div>
+
+                    <!-- Store List Sidebar -->
+                    <div class="store-list">
+                        <div class="store-card">
+                            <h4 class="store-name">Libreria Maracena</h4>
+                            <p class="store-address"><i class="fas fa-map-marker-alt"></i> Calle Marqués, 32 - Granada
+                            </p>
+                            <p class="store-phone"><i class="fas fa-phone-alt"></i> 958 123 456</p>
+                        </div>
+
+                        <div class="store-card">
+                            <h4 class="store-name">Libreria Centro</h4>
+                            <p class="store-address"><i class="fas fa-map-marker-alt"></i> Calle Cristo de la Yedra, 16
+                                - Granada</p>
+                            <p class="store-phone"><i class="fas fa-phone-alt"></i> 958 234 567</p>
+                        </div>
+
+                        <div class="store-card">
+                            <h4 class="store-name">Libreria Zaidín</h4>
+                            <p class="store-address"><i class="fas fa-map-marker-alt"></i> Calle Alonso Quijano, 3 -
+                                Granada</p>
+                            <p class="store-phone"><i class="fas fa-phone-alt"></i> 958 345 678</p>
+                        </div>
+
+                        <div class="store-card">
+                            <h4 class="store-name">Libreria Churriana de la Vega</h4>
+                            <p class="store-address"><i class="fas fa-map-marker-alt"></i> Calle Guadiana, 55 - Granada
+                            </p>
+                            <p class="store-phone"><i class="fas fa-phone-alt"></i> 958 456 789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER SECTION
+         Three-column grid: Social links, Legal links, Copyright
+         ============================================ -->
+    <!-- ============================================
+         FOOTER SECTION
+         ============================================ -->
+    <footer>
+        <div class="footer-container">
+
+            <!-- Top Row: Social Icons & Legal Links -->
+            <div class="footer-top">
+                <!-- Social Media Icons (Left) -->
+                <div class="footer-social">
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="Camera"><i class="fas fa-camera"></i></a>
+                </div>
+
+                <!-- Legal Links (Right) -->
+                <ul class="footer-legal">
+                    <li><a href="#">Política de datos</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#">Cookies</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Separator Line -->
+            <hr class="footer-separator">
+
+            <!-- Bottom Row: Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Librería Zona Meta - Diseñado por Diego - Todos los derechos reservados</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tienda Online - Zona Meta. Explora nuestra amplia selección de libros por categorías.">
+    <title>Tienda Online - Zona Meta</title>
+
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER SECTION
+         Contains logo and user account icon
+         ============================================ -->
+    <header>
+        <div class="header-left">
+            <h1 class="brand-name">Zona Meta</h1>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Cuenta de usuario">
+                <i class="far fa-user"></i>
+            </button>
+            <div class="header-logo-container">
+                <img src="assets/images/zona_meta_logo_red_1767889879981.png" alt="Zona Meta Logo Deporte">
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         NAVIGATION HEADER (Single Bar)
+         ============================================ -->
+    <nav
+        style="background-color: #8B6F47; border-top: 4px solid #D4AF37; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; height: 70px;">
+        <!-- Search form on the left -->
+        <div class="nav-search-container" style="flex: 0 0 500px; display: flex; align-items: center;">
+            <form class="nav-search" role="search" style="position: relative; width: 100%;">
+                <i class="fas fa-search search-icon"
+                    style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #000; font-size: 0.9rem;"></i>
+                <input type="search" placeholder="Buscar libros, autores, ISBN..." aria-label="Buscar"
+                    style="width: 100%; padding: 10px 15px 10px 40px; border-radius: 20px; border: none; font-family: 'Inter', sans-serif; height: 40px; font-size: 0.95rem;">
+            </form>
+        </div>
+
+        <!-- Navigation menu on the right -->
+        <ul class="nav-menu"
+            style="display: flex; gap: 2.5rem; list-style: none; margin: 0; align-items: center; padding: 0;">
+            <li><a href="index.html"
+                    style="color: #BDBDBD; font-weight: 500; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 1rem;">Tu
+                    librería</a></li>
+            <li><a href="tienda.html"
+                    style="color: #fff; font-weight: 600; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 1rem;">Compra
+                    on-line</a></li>
+            <li><a href="#contacto"
+                    style="color: #BDBDBD; font-weight: 500; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 1rem;">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main style="background-color: #E6DCCD; padding-top: 3rem; padding-bottom: 5rem; min-height: 100vh;">
+        <div class="container">
+
+            <div class="products-page-layout">
+
+                <!-- Sidebar Filters -->
+                <aside class="sidebar-filters"
+                    style="background-color: #F8F5F2; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h2 class="filter-title"
+                        style="border-bottom: 2px solid #E8B923; margin-bottom: 1.5rem; padding-bottom: 0.5rem; color: #8B6F47; font-size: 1.8rem; font-family: 'Playfair Display', serif;">
+                        Filtros</h2>
+
+                    <div class="filter-group">
+                        <h3>Categorías</h3>
+                        <label class="checkbox-container">Deportes
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Nutrición
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Entrenamiento
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Bienestar
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Psicología Deportiva
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Disciplina</h3>
+                        <label class="checkbox-container">Running
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Fitness
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Yoga
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Ciclismo
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Precio</h3>
+                        <label class="checkbox-container">Menos de 15€
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">15€ - 25€
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Más de 25€
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </aside>
+
+                <!-- Products Grid Area -->
+                <div class="products-area">
+
+                    <!-- Sort Dropdown -->
+                    <div class="sort-bar">
+                        <div class="sort-dropdown"
+                            style="padding: 10px 20px; border: 2px solid #D4AF37; background: #fff; font-weight: 600; color: #000; border-radius: 5px;">
+                            <span>Mas relevantes</span>
+                            <i class="fas fa-chevron-down" style="margin-left: 10px; font-size: 0.8rem;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="shop-product-grid">
+
+                        <!-- Card 1 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_arte_movimiento_1767888939663.png"
+                                    alt="El arte del movimiento">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Running</span>
+                                <h3 class="shop-title">El arte del movimiento</h3>
+                                <p class="shop-author">Dra. Ana Sofía Ramírez</p>
+                                <p class="shop-desc">Domina tu mente, domina el juego. La técnica perfecta de running,
+                                    medir tus tiempos, dividir resistencia.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">21,99€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_energia_plena_1767888952746.png" alt="Energía Plena">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Nutrición</span>
+                                <h3 class="shop-title">Energia Plena</h3>
+                                <p class="shop-author">Lic. Patricia Soto</p>
+                                <p class="shop-desc">Mente en Movimiento guía definitiva para aquellos que buscan
+                                    optimizar su rendimiento físico y bienestar a través del running, yoga y ciclismo.
+                                </p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">18,50€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_energia_plena_1767888952746.png" alt="Pedalea tu cima">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Ciclismo</span>
+                                <h3 class="shop-title">Pedalea tu cima</h3>
+                                <p class="shop-author">Dr. Ricardo "Ricky" Morales</p>
+                                <p class="shop-desc">Domina cada ascenso y mejora tu resistencia, para obtener tus
+                                    mejores marcas y rendimiento.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">24,95€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_mente_calma_1767888985559.png" alt="Mente en calma">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Yoga</span>
+                                <h3 class="shop-title">Mente en calma</h3>
+                                <p class="shop-author">Elena Ray</p>
+                                <p class="shop-desc">Técnicas de mindfulness y meditación para encontrar la paz interior
+                                    y reducir el estrés diario.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">16,99€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/product_book_5_1767889140602.png" alt="The Silent Whisper">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Thriller</span>
+                                <h3 class="shop-title">The Silent Whisper</h3>
+                                <p class="shop-author">Marcus Black</p>
+                                <p class="shop-desc">Un misterio inquietante que te mantendrá despierto toda la noche.
+                                    ¿Quién susurra en la oscuridad?</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">19,95€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 6 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/product_book_6_1767889159442.png" alt="Forest Friends">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Infantil</span>
+                                <h3 class="shop-title">Forest Friends</h3>
+                                <p class="shop-author">Sarah Jenkins</p>
+                                <p class="shop-desc">Aventuras mágicas en el bosque encantado para los más pequeños
+                                    exploradores de la casa.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">12,50€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 7 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/product_book_7_1767889175341.png" alt="Mariner's Atlas">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Historia</span>
+                                <h3 class="shop-title">Mariner's Atlas</h3>
+                                <p class="shop-author">Capt. James Cook</p>
+                                <p class="shop-desc">Crónicas de viajes y descubrimientos en los siete mares. Una joya
+                                    para los amantes de la historia.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">28,00€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 8 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_arte_movimiento_1767888939663.png" alt="Rutas Salvajes">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Running</span>
+                                <h3 class="shop-title">Rutas Salvajes</h3>
+                                <p class="shop-author">Carlos Runner</p>
+                                <p class="shop-desc">Guía definitiva de las mejores rutas de trail running en montañas
+                                    europeas.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">22,50€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 9 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_energia_plena_1767888952746.png" alt="Cocina Vital">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Nutrición</span>
+                                <h3 class="shop-title">Cocina Vital</h3>
+                                <p class="shop-author">Chef Maria</p>
+                                <p class="shop-desc">Recetas energéticas y saludables para potenciar tu rendimiento
+                                    deportivo día a día.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">19,99€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 10 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_energia_plena_1767888952746.png" alt="Montaña Xtrel">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Ciclismo</span>
+                                <h3 class="shop-title">Montaña Xtrel</h3>
+                                <p class="shop-author">David Rider</p>
+                                <p class="shop-desc">Manual experto para ciclismo de montaña extremo. Descenso, equipo y
+                                    seguridad.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">25,50€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 11 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/book_mente_calma_1767888985559.png" alt="Paz Interior">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Yoga</span>
+                                <h3 class="shop-title">Paz Interior</h3>
+                                <p class="shop-author">Guru Ananda</p>
+                                <p class="shop-desc">Viaje hacia el autoconocimiento y la serenidad a través de la
+                                    meditación profunda.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">15,00€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 12 -->
+                        <article class="shop-card">
+                            <div class="shop-image">
+                                <img src="assets/images/product_book_7_1767889175341.png" alt="El Imperio">
+                            </div>
+                            <div class="shop-content">
+                                <span class="shop-category">Historia</span>
+                                <h3 class="shop-title">El Imperio</h3>
+                                <p class="shop-author">Prof. J. Smith</p>
+                                <p class="shop-desc">Auge y caída de las grandes civilizaciones. Un análisis histórico
+                                    detallado.</p>
+                                <div class="shop-footer">
+                                    <span class="shop-price">29,99€</span>
+                                    <button class="btn-details">Ver detalles</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================
+         FOOTER SECTION
+         ============================================ -->
+    <footer>
+        <div class="footer-container">
+
+            <!-- Top Row: Social Icons & Legal Links -->
+            <div class="footer-top">
+                <!-- Social Media Icons (Left) -->
+                <div class="footer-social">
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="Camera"><i class="fas fa-camera"></i></a>
+                </div>
+
+                <!-- Legal Links (Right) -->
+                <ul class="footer-legal">
+                    <li><a href="#">Política de datos</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#">Cookies</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Separator Line -->
+            <hr class="footer-separator">
+
+            <!-- Bottom Row: Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Librería Zona Meta - Diseñado por Diego - Todos los derechos reservados</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

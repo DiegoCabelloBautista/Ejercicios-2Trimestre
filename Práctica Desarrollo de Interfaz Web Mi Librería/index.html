@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi Librería - Tu tienda de libros online con las mejores novedades literarias">
+    <title>Mi Librería - Zona Meta</title>
+
+    <!-- Enlace a hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER - CABECERA CON LOGO Y NOMBRE
+         Flexbox para centrado vertical
+         ============================================ -->
+    <header>
+        <!-- Logo de la empresa -->
+        <img src="images/logo.png" alt="Logo Zona Meta" class="header-logo">
+
+        <!-- Nombre de la empresa -->
+        <h1 class="header-title">Zona Meta</h1>
+    </header>
+
+    <!-- ============================================
+         NAV - BARRA DE NAVEGACIÓN
+         Flexbox: Buscador (izquierda) + Menú (derecha)
+         ============================================ -->
+    <nav>
+        <!-- Buscador - Lado izquierdo -->
+        <div class="nav-search">
+            <form class="search-form" action="#" method="get">
+                <input type="search" class="search-input" placeholder="Buscar libros, autores..." name="search"
+                    aria-label="Buscar">
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </div>
+
+        <!-- Menú de navegación - Lado derecho -->
+        <ul class="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda-online</a></li>
+            <li><a href="#registro">Registro</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+         MAIN - CONTENIDO PRINCIPAL
+         ============================================ -->
+    <main>
+
+        <!-- ============================================
+             SECCIÓN 1: ZONA DE PRESENTACIÓN
+             Hero section con introducción a la marca
+             ============================================ -->
+        <section class="hero-section">
+            <!-- Contenido textual -->
+            <div class="hero-content">
+                <h2 class="hero-title">Bienvenido a Zona Meta</h2>
+                <p class="hero-text">
+                    Tu puerta de partida para la superación.
+                </p>
+                <p class="hero-text">
+                    En Zona Meta creemos que cada libro es una puerta a nuevos mundos,
+                    ideas y experiencias. Descubre nuestra cuidada selección de títulos
+                    que transformarán tu manera de ver el mundo. Desde los clásicos
+                    atemporales hasta las últimas novedades, tenemos el libro perfecto
+                    para cada lector apasionado.
+                </p>
+                <a href="tienda.html" class="hero-button">Explorar tienda</a>
+            </div>
+
+            <!-- Imagen hero -->
+            <div class="hero-image">
+                <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/hero_zona_meta_1767888445292.png"
+                    alt="Ilustración de libros y deporte">
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECCIÓN 2: NOVEDADES
+             Grid de libros destacados
+             ============================================ -->
+        <section>
+            <h2 class="section-title">Libros y Artículos Destacados</h2>
+
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
+                Explora nuestra selección de títulos más populares y novedades literarias.
+                Cada libro ha sido cuidadosamente seleccionado para ofrecerte las mejores
+                experiencias de lectura.
+            </p>
+
+            <!-- Grid de productos usando CSS Grid -->
+            <div class="products-grid">
+
+                <!-- Tarjeta de producto 1 -->
+                <article class="product-card">
+                    <h3 class="product-name">El arte del movimiento</h3>
+                    <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_arte_movimiento_1767887519235.png"
+                        alt="Portada de El arte del movimiento" class="product-image">
+                    <p class="product-description">
+                        Una exploración fascinante sobre la dinámica del cuerpo humano
+                        y su expresión artística a través del movimiento.
+                    </p>
+                    <div class="product-footer">
+                        <span class="product-price">16,99€</span>
+                        <button class="product-button">Comprar</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de producto 2 -->
+                <article class="product-card">
+                    <h3 class="product-name">Imaginarium</h3>
+                    <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_imaginarium_1767887534437.png"
+                        alt="Portada de Imaginarium" class="product-image">
+                    <p class="product-description">
+                        Un viaje mágico a través de mundos fantásticos donde la
+                        imaginación no tiene límites. Perfecto para soñadores.
+                    </p>
+                    <div class="product-footer">
+                        <span class="product-price">14,99€</span>
+                        <button class="product-button">Comprar</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de producto 3 -->
+                <article class="product-card">
+                    <h3 class="product-name">Poesía en azul</h3>
+                    <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_poesia_azul_1767887548043.png"
+                        alt="Portada de Poesía en azul" class="product-image">
+                    <p class="product-description">
+                        Colección de poemas contemporáneos que exploran las
+                        profundidades del océano emocional humano.
+                    </p>
+                    <div class="product-footer">
+                        <span class="product-price">12,99€</span>
+                        <button class="product-button">Comprar</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de producto 4 -->
+                <article class="product-card">
+                    <h3 class="product-name">Secretos al atardecer</h3>
+                    <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_secretos_atardecer_1767887562966.png"
+                        alt="Portada de Secretos al atardecer" class="product-image">
+                    <p class="product-description">
+                        Novela de misterio ambientada en un pequeño pueblo costero
+                        donde nada es lo que parece cuando cae la noche.
+                    </p>
+                    <div class="product-footer">
+                        <span class="product-price">18,99€</span>
+                        <button class="product-button">Comprar</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECCIÓN 3: BUSCADOR DE TIENDAS
+             Flexbox para mapa + listado
+             ============================================ -->
+        <section>
+            <h2 class="section-title">Encuentra la tienda más cercana</h2>
+
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
+                Visítanos en cualquiera de nuestras tiendas físicas. Nuestro equipo
+                estará encantado de ayudarte a encontrar tu próxima lectura favorita.
+            </p>
+
+            <div class="store-finder">
+                <!-- Mapa (placeholder) -->
+                <div class="store-map">
+                    <p>🗺️ Mapa interactivo de tiendas</p>
+                </div>
+
+                <!-- Listado de tiendas -->
+                <div class="store-list">
+                    <h3>Librerías Zona Meta</h3>
+
+                    <div class="store-item">
+                        <div class="store-name">📍 Librería Centro</div>
+                        <div class="store-address">Calle Mayor, 45 - Madrid</div>
+                    </div>
+
+                    <div class="store-item">
+                        <div class="store-name">📍 Librería Norte</div>
+                        <div class="store-address">Av. Diagonal, 123 - Barcelona</div>
+                    </div>
+
+                    <div class="store-item">
+                        <div class="store-name">📍 Librería Poniente Sur</div>
+                        <div class="store-address">Plaza España, 8 - Sevilla</div>
+                    </div>
+
+                    <div class="store-item">
+                        <div class="store-name">📍 Librería Levante</div>
+                        <div class="store-address">Calle Colón, 67 - Valencia</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER - PIE DE PÁGINA
+         CSS Grid de 3 columnas iguales
+         ============================================ -->
+    <footer>
+
+        <!-- Columna 1: Enlaces de interés -->
+        <div class="footer-links">
+            <h3>Enlaces de interés</h3>
+            <ul>
+                <li><a href="#envios">Política de envíos</a></li>
+                <li><a href="#cookies">Cookies</a></li>
+                <li><a href="#condiciones">Términos y condiciones</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 2: Copyright -->
+        <div class="footer-copyright">
+            <h3>Zona Meta</h3>
+            <p>&copy; 2025 Zona Meta Librerías - Todos los derechos reservados</p>
+            <p>Diseño de Interfaz Web - 2º DAW</p>
+        </div>
+
+        <!-- Columna 3: Redes sociales -->
+        <div class="footer-social">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="#facebook" class="social-icon" aria-label="Facebook">f</a>
+                <a href="#twitter" class="social-icon" aria-label="Twitter">𝕏</a>
+                <a href="#instagram" class="social-icon" aria-label="Instagram">📷</a>
+                <a href="#youtube" class="social-icon" aria-label="YouTube">▶</a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
