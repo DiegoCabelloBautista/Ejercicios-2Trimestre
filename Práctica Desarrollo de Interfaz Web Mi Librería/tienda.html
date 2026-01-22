@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda online de libros - Zona Meta. Encuentra los mejores libros por categorías">
+    <title>Tienda Online - Zona Meta</title>
+
+    <!-- Enlace a hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-store">
+
+    <!-- ============================================
+         HEADER - CABECERA CON LOGO Y NOMBRE
+         Flexbox para centrado vertical
+         ============================================ -->
+    <header>
+        <!-- Logo de la empresa -->
+        <img src="images/logo.png" alt="Logo Zona Meta" class="header-logo">
+
+        <!-- Nombre de la empresa -->
+        <h1 class="header-title">Zona Meta</h1>
+    </header>
+
+    <!-- ============================================
+         NAV - BARRA DE NAVEGACIÓN
+         Flexbox: Buscador (izquierda) + Menú (derecha)
+         ============================================ -->
+    <nav>
+        <!-- Buscador - Lado izquierdo -->
+        <div class="nav-search">
+            <form class="search-form" action="#" method="get">
+                <input type="search" class="search-input" placeholder="Buscar libros, autores..." name="search"
+                    aria-label="Buscar">
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </div>
+
+        <!-- Botón menú hamburguesa (Móvil) -->
+        <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Menú de navegación - Lado derecho -->
+        <ul class="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda-online</a></li>
+            <li><a href="#registro">Registro</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+         MAIN - CONTENIDO PRINCIPAL
+         Grid de 2 columnas: Sidebar (25%) + Productos (75%)
+         ============================================ -->
+    <main>
+
+        <h2 class="section-title">Tienda Online</h2>
+
+        <!-- Layout de dos columnas con CSS Grid -->
+        <div class="shop-layout">
+
+            <!-- ============================================
+                 ASIDE - SIDEBAR DE CATEGORÍAS (25%)
+                 Menú lateral con géneros literarios
+                 ============================================ -->
+            <aside class="categories-sidebar">
+                <h3 class="categories-title">Categorías</h3>
+
+                <ul class="categories-list">
+                    <li class="category-item">
+                        <a href="#ficcion" class="category-link">📚 Ficción</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#no-ficcion" class="category-link">📖 No Ficción</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#poesia" class="category-link">✍️ Poesía</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#novela" class="category-link">📕 Novela</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#ensayo" class="category-link">📘 Ensayo</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#biografia" class="category-link">👤 Biografía</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#historia" class="category-link">🏛️ Historia</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#ciencia" class="category-link">🔬 Ciencia</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#arte" class="category-link">🎨 Arte</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#infantil" class="category-link">🧸 Infantil</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- ============================================
+                 SECTION - ÁREA DE PRODUCTOS (75%)
+                 Grid de tarjetas de productos
+                 ============================================ -->
+            <section class="products-area">
+
+                <!-- Grid de productos (3x3) -->
+                <div class="products-grid">
+
+                    <!-- Tarjeta de producto 1 -->
+                    <article class="product-card">
+                        <h3 class="product-name">El arte del movimiento</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_arte_movimiento_1767887519235.png"
+                            alt="Portada de El arte del movimiento" class="product-image">
+                        <p class="product-description">
+                            Una exploración fascinante sobre la dinámica del cuerpo humano
+                            y su expresión artística.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">16,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 2 -->
+                    <article class="product-card">
+                        <h3 class="product-name">Imaginarium</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_imaginarium_1767887534437.png"
+                            alt="Portada de Imaginarium" class="product-image">
+                        <p class="product-description">
+                            Un viaje mágico a través de mundos fantásticos donde la
+                            imaginación no tiene límites.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">14,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 3 -->
+                    <article class="product-card">
+                        <h3 class="product-name">Poesía en azul</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_poesia_azul_1767887548043.png"
+                            alt="Portada de Poesía en azul" class="product-image">
+                        <p class="product-description">
+                            Colección de poemas contemporáneos que exploran las
+                            profundidades del océano emocional.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">12,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 4 -->
+                    <article class="product-card">
+                        <h3 class="product-name">Secretos al atardecer</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_secretos_atardecer_1767887562966.png"
+                            alt="Portada de Secretos al atardecer" class="product-image">
+                        <p class="product-description">
+                            Novela de misterio ambientada en un pequeño pueblo costero
+                            donde nada es lo que parece.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">18,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 5 -->
+                    <article class="product-card">
+                        <h3 class="product-name">El arte del movimiento</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_arte_movimiento_1767887519235.png"
+                            alt="Portada de El arte del movimiento" class="product-image">
+                        <p class="product-description">
+                            Descubre los secretos del movimiento corporal y la expresión
+                            artística en esta obra maestra.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">17,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 6 -->
+                    <article class="product-card">
+                        <h3 class="product-name">Guía de ilustración</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_guia_ilustracion_1767887577401.png"
+                            alt="Portada de Guía de ilustración" class="product-image">
+                        <p class="product-description">
+                            Manual completo para artistas que desean perfeccionar sus
+                            técnicas de ilustración digital.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">22,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 7 -->
+                    <article class="product-card">
+                        <h3 class="product-name">Historias de medianoche</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_historias_medianoche_1767887591007.png"
+                            alt="Portada de Historias de medianoche" class="product-image">
+                        <p class="product-description">
+                            Colección de relatos cortos que te mantendrán despierto
+                            hasta altas horas de la noche.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">15,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 8 -->
+                    <article class="product-card">
+                        <h3 class="product-name">Cocina mediterránea</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_cocina_mediterranea_1767887605292.png"
+                            alt="Portada de Cocina mediterránea" class="product-image">
+                        <p class="product-description">
+                            Recetas tradicionales y modernas de la gastronomía
+                            mediterránea con fotografías espectaculares.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">24,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta de producto 9 -->
+                    <article class="product-card">
+                        <h3 class="product-name">Viajes extraordinarios</h3>
+                        <img src="file:///C:/Users/guill/.gemini/antigravity/brain/33393f8a-82ca-4b1a-828b-719a49e97e71/book_viajes_extraordinarios_1767887623804.png"
+                            alt="Portada de Viajes extraordinarios" class="product-image">
+                        <p class="product-description">
+                            Guía inspiradora de los destinos más fascinantes del mundo
+                            con consejos de viajeros expertos.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">19,99€</span>
+                            <button class="product-button">Comprar</button>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER - PIE DE PÁGINA
+         CSS Grid de 3 columnas iguales
+         ============================================ -->
+    <footer>
+
+        <!-- Columna 1: Enlaces de interés -->
+        <div class="footer-links">
+            <h3>Enlaces de interés</h3>
+            <ul>
+                <li><a href="#envios">Política de envíos</a></li>
+                <li><a href="#cookies">Cookies</a></li>
+                <li><a href="#condiciones">Términos y condiciones</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 2: Copyright -->
+        <div class="footer-copyright">
+            <h3>Zona Meta</h3>
+            <p>&copy; 2025 Zona Meta Librerías - Todos los derechos reservados</p>
+            <p>Diseño de Interfaz Web - 2º DAW</p>
+        </div>
+
+        <!-- Columna 3: Redes sociales -->
+        <div class="footer-social">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="#facebook" class="social-icon" aria-label="Facebook">f</a>
+                <a href="#twitter" class="social-icon" aria-label="Twitter">𝕏</a>
+                <a href="#instagram" class="social-icon" aria-label="Instagram">📷</a>
+                <a href="#youtube" class="social-icon" aria-label="YouTube">▶</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

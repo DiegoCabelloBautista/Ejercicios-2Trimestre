@@ -1,0 +1,864 @@
+/* ============================================
+   MI LIBRERÍA - HOJA DE ESTILOS PRINCIPAL
+   Autor: Desarrollo Web
+   Descripción: Estilos para sitio web de librería
+   Tecnologías: CSS Grid, Flexbox, Google Fonts
+   ============================================ */
+
+/* ============================================
+   IMPORTACIÓN DE FUENTES GOOGLE FONTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* ============================================
+   VARIABLES CSS - SISTEMA DE DISEÑO
+   ============================================ */
+:root {
+    /* Paleta de Colores */
+    --color-primary: #9B8B6F;
+    /* Dorado/Marrón claro - Header/Nav */
+    --color-secondary: #3D3226;
+    /* Marrón oscuro - Footer */
+    --color-background: #E8DCC4;
+    /* Beige/Crema - Fondo principal */
+    --color-white: #FFFFFF;
+    /* Blanco - Tarjetas */
+    --color-text-dark: #2C2416;
+    /* Texto oscuro */
+    --color-text-light: #6B5D4F;
+    /* Texto secundario */
+    --color-accent: #8B7355;
+    /* Acento para botones */
+
+    /* Tipografía */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Bordes */
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   RESET Y ESTILOS BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   HEADER - CABECERA
+   Flexbox para centrado vertical
+   ============================================ */
+header {
+    background-color: var(--color-primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+
+    /* Flexbox para alineación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.header-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: var(--color-background);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius);
+}
+
+.header-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* ============================================
+   NAV - BARRA DE NAVEGACIÓN
+   Flexbox para distribución izquierda/derecha
+   ============================================ */
+nav {
+    background-color: var(--color-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+
+    /* Flexbox para layout horizontal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* Buscador - Lado izquierdo */
+.nav-search {
+    flex: 0 1 400px;
+}
+
+.search-form {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.search-input {
+    flex: 1;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 2px solid var(--color-white);
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    background-color: var(--color-white);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.search-button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Menú de navegación - Lado derecho */
+.nav-menu {
+    list-style: none;
+
+    /* Flexbox para menú horizontal */
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secondary);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   MAIN - CONTENIDO PRINCIPAL
+   ============================================ */
+main {
+    flex: 1;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2rem;
+}
+
+/* ============================================
+   ZONA DE PRESENTACIÓN - HERO SECTION
+   Flexbox para layout de dos columnas
+   ============================================ */
+.hero-section {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--spacing-xl);
+
+    /* Flexbox para contenido */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    color: var(--color-secondary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-text {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-button:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-image {
+    flex: 0 0 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* ============================================
+   GRID DE PRODUCTOS/NOVEDADES
+   CSS Grid para layout de tarjetas
+   ============================================ */
+.products-grid {
+    /* Grid de 4 columnas en desktop */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+/* ============================================
+   TARJETAS DE PRODUCTO
+   Flexbox para organización interna
+   ============================================ */
+.product-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+
+    /* Flexbox vertical */
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Nombre del producto - Superior */
+.product-name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-xs);
+    min-height: 2.5rem;
+}
+
+/* Imagen del producto - Centro */
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin: var(--spacing-sm) 0;
+}
+
+/* Descripción - Inferior */
+.product-description {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Precio y botón */
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-background);
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.product-button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* ============================================
+   BUSCADOR DE TIENDAS
+   Flexbox para layout de mapa + listado
+   ============================================ */
+.store-finder {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+
+    /* Flexbox para dos columnas */
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.store-map {
+    flex: 1;
+    min-height: 400px;
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+}
+
+.store-list {
+    flex: 0 0 300px;
+}
+
+.store-list h3 {
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.store-item {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-background);
+}
+
+.store-item:last-child {
+    border-bottom: none;
+}
+
+.store-name {
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.store-address {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+/* ============================================
+   PÁGINA DE TIENDA - LAYOUT DE DOS COLUMNAS
+   CSS Grid para sidebar + contenido
+   ============================================ */
+.shop-layout {
+    /* Grid de 2 columnas: 25% sidebar, 75% productos */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--spacing-xl);
+}
+
+/* ============================================
+   SIDEBAR DE CATEGORÍAS (25%)
+   ============================================ */
+.categories-sidebar {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    height: fit-content;
+    position: sticky;
+    top: var(--spacing-lg);
+}
+
+.categories-title {
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.categories-list {
+    list-style: none;
+}
+
+.category-item {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    background-color: var(--color-background);
+    padding-left: var(--spacing-md);
+}
+
+.category-link {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.category-item:hover .category-link {
+    color: var(--color-accent);
+}
+
+
+
+/* ============================================
+   FOOTER - PIE DE PÁGINA
+   CSS Grid de 3 columnas iguales
+   ============================================ */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin-top: auto;
+
+    /* Grid de 3 columnas iguales */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+}
+
+/* Columna 1: Enlaces de interés */
+.footer-links h3,
+.footer-copyright h3,
+.footer-social h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Columna 2: Copyright */
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-copyright p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* Columna 3: Redes sociales */
+.footer-social {
+    text-align: right;
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: flex-end;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    transform: translateY(-4px);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Estilos base para el botón hamburguesa (oculto en desktop) */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   TABLET (601px - 1024px)
+   ============================================ */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* Header: Separar logo y título */
+    header {
+        justify-content: space-between;
+    }
+
+    /* Logo opcional más pequeño */
+    .header-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Navegación */
+    nav {
+        flex-wrap: wrap;
+        /* Permitir que los elementos salten de línea */
+    }
+
+    /* Buscador: Debajo del menú */
+    .nav-search {
+        order: 2;
+        /* Cambiar orden visual */
+        flex: 1 1 100%;
+        /* Ocupar todo el ancho */
+        margin-top: var(--spacing-sm);
+    }
+
+    .nav-menu {
+        order: 1;
+        /* Menú arriba */
+        flex: 1;
+        /* Ocupar el espacio restante o ajustar */
+        display: flex;
+        /* Mantener horizontal */
+        justify-content: flex-end;
+        /* Alinear a la derecha si es necesario */
+    }
+
+    /* Tienda: Layout de contenido apilado */
+    .shop-layout {
+        display: flex;
+        /* Cambiar Grid a Flex column */
+        flex-direction: column;
+    }
+
+    .categories-sidebar {
+        /* Sidebar ocupa todo el ancho, arriba o abajo */
+        width: 100%;
+        position: relative;
+        /* Quitar sticky si molesta o ajustar */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .categories-list {
+        /* Opcional: mostrar categorías en columna o grid si se desea, 
+           pero las instrucciones piden solo apilarse */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--spacing-sm);
+    }
+
+    /* Catálogo: Filas de 2 o 3 productos */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas base */
+    }
+
+    /* Ajuste si la pantalla es más estrecha (tablet pequeña) */
+    @media (max-width: 800px) {
+        .products-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Footer: Mantener horizontal ajustando tamaño */
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        /* Mantener 3 columnas */
+        font-size: 0.9rem;
+        /* Reducir un poco texto si es necesario */
+        padding: var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+}
+
+/* ============================================
+   MÓVIL (Hasta 600px)
+   ============================================ */
+@media (max-width: 600px) {
+    /* Estructura General Vertical */
+
+    /* CABECERA (Vertical) */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* NAVEGACIÓN (Vertical + Hamburguesa) */
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        /* Elementos ocupan ancho disponible */
+        padding: var(--spacing-sm);
+        position: relative;
+    }
+
+    /* Botón Hamburguesa Visible */
+    .mobile-menu-btn {
+        display: flex;
+        align-self: flex-end;
+        /* Botón a la derecha */
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Menú Oculto por defecto */
+    .nav-menu {
+        display: none;
+        /* Ocultar menú normal */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-primary);
+        padding: var(--spacing-sm) 0;
+        gap: 0;
+    }
+
+    /* Menú Mostrado (activado con JS) */
+    .nav-menu.active {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: var(--spacing-sm);
+        text-align: center;
+    }
+
+    /* Buscador Independiente (debajo del menú) */
+    .nav-search {
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    /* PÁGINA DE PRODUCTOS (Móvil) */
+
+    /* Ocultar logo en tienda móvil usando clase específica */
+    .page-store .header-logo {
+        display: none;
+    }
+
+    /* Layout Vertical */
+    .shop-layout {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .categories-sidebar {
+        /* Sidebar estilo acordeón o lista simple */
+        position: static;
+        width: 100%;
+    }
+
+    .categories-list {
+        /* Ocultar lista larga en móvil si se desea, o dejarla */
+        /* Instrucciones dicen: Menú de hamburguesa (hecho arriba) */
+        /* Catálogo se apila verticalmente */
+        display: block;
+        /* Asegurar comportamiento bloque */
+    }
+
+    /* Catálogo: Una columna (1 producto por fila) */
+    .products-grid {
+        display: flex;
+        /* Flexbox column o Grid 1col */
+        flex-direction: column;
+        /* O grid-template-columns: 1fr; */
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER (Vertical) */
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+
+    .footer-links,
+    .footer-copyright,
+    .footer-social {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Animación Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
