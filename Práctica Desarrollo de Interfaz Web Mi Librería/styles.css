@@ -611,33 +611,236 @@ footer {
    RESPONSIVE DESIGN
    ============================================ */
 
-/* Tablets */
-@media (max-width: 968px) {
+/* Estilos base para el botón hamburguesa (oculto en desktop) */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   TABLET (601px - 1024px)
+   ============================================ */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* Header: Separar logo y título */
+    header {
+        justify-content: space-between;
+    }
+
+    /* Logo opcional más pequeño */
+    .header-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Navegación */
+    nav {
+        flex-wrap: wrap;
+        /* Permitir que los elementos salten de línea */
+    }
+
+    /* Buscador: Debajo del menú */
+    .nav-search {
+        order: 2;
+        /* Cambiar orden visual */
+        flex: 1 1 100%;
+        /* Ocupar todo el ancho */
+        margin-top: var(--spacing-sm);
+    }
+
+    .nav-menu {
+        order: 1;
+        /* Menú arriba */
+        flex: 1;
+        /* Ocupar el espacio restante o ajustar */
+        display: flex;
+        /* Mantener horizontal */
+        justify-content: flex-end;
+        /* Alinear a la derecha si es necesario */
+    }
+
+    /* Tienda: Layout de contenido apilado */
     .shop-layout {
-        grid-template-columns: 1fr;
+        display: flex;
+        /* Cambiar Grid a Flex column */
+        flex-direction: column;
     }
 
     .categories-sidebar {
-        position: static;
-    }
-
-    .hero-section {
+        /* Sidebar ocupa todo el ancho, arriba o abajo */
+        width: 100%;
+        position: relative;
+        /* Quitar sticky si molesta o ajustar */
+        display: flex;
         flex-direction: column;
     }
 
-    .store-finder {
-        flex-direction: column;
+    .categories-list {
+        /* Opcional: mostrar categorías en columna o grid si se desea, 
+           pero las instrucciones piden solo apilarse */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--spacing-sm);
     }
 
-    .store-list {
-        flex: 1;
+    /* Catálogo: Filas de 2 o 3 productos */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas base */
     }
 
+    /* Ajuste si la pantalla es más estrecha (tablet pequeña) */
+    @media (max-width: 800px) {
+        .products-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Footer: Mantener horizontal ajustando tamaño */
     footer {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        /* Mantener 3 columnas */
+        font-size: 0.9rem;
+        /* Reducir un poco texto si es necesario */
+        padding: var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+}
+
+/* ============================================
+   MÓVIL (Hasta 600px)
+   ============================================ */
+@media (max-width: 600px) {
+    /* Estructura General Vertical */
+
+    /* CABECERA (Vertical) */
+    header {
+        flex-direction: column;
         text-align: center;
     }
 
+    /* NAVEGACIÓN (Vertical + Hamburguesa) */
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        /* Elementos ocupan ancho disponible */
+        padding: var(--spacing-sm);
+        position: relative;
+    }
+
+    /* Botón Hamburguesa Visible */
+    .mobile-menu-btn {
+        display: flex;
+        align-self: flex-end;
+        /* Botón a la derecha */
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Menú Oculto por defecto */
+    .nav-menu {
+        display: none;
+        /* Ocultar menú normal */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-primary);
+        padding: var(--spacing-sm) 0;
+        gap: 0;
+    }
+
+    /* Menú Mostrado (activado con JS) */
+    .nav-menu.active {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: var(--spacing-sm);
+        text-align: center;
+    }
+
+    /* Buscador Independiente (debajo del menú) */
+    .nav-search {
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    /* PÁGINA DE PRODUCTOS (Móvil) */
+
+    /* Ocultar logo en tienda móvil usando clase específica */
+    .page-store .header-logo {
+        display: none;
+    }
+
+    /* Layout Vertical */
+    .shop-layout {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .categories-sidebar {
+        /* Sidebar estilo acordeón o lista simple */
+        position: static;
+        width: 100%;
+    }
+
+    .categories-list {
+        /* Ocultar lista larga en móvil si se desea, o dejarla */
+        /* Instrucciones dicen: Menú de hamburguesa (hecho arriba) */
+        /* Catálogo se apila verticalmente */
+        display: block;
+        /* Asegurar comportamiento bloque */
+    }
+
+    /* Catálogo: Una columna (1 producto por fila) */
+    .products-grid {
+        display: flex;
+        /* Flexbox column o Grid 1col */
+        flex-direction: column;
+        /* O grid-template-columns: 1fr; */
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER (Vertical) */
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+
+    .footer-links,
+    .footer-copyright,
     .footer-social {
         text-align: center;
     }
@@ -647,27 +850,15 @@ footer {
     }
 }
 
-/* Móviles */
-@media (max-width: 640px) {
-    nav {
-        flex-direction: column;
-        gap: var(--spacing-sm);
+/* Animación Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 
-    .nav-search {
-        width: 100%;
-    }
-
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .header-title {
-        font-size: 1.5rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

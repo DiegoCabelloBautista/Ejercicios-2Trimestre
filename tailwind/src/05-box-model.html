@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Box Model y Layout</title>
+    <!-- Google Fonts Link for the card example -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body class="font-[Plus_Jakarta_Sans] bg-slate-50 min-h-screen p-10">
+    <a href="index.html" class="text-blue-500 hover:underline mb-10 block">&larr; Volver al Inicio</a>
+
+    <h1 class="text-4xl font-bold mb-8 text-center">05. Box Model y Dimensiones</h1>
+
+    <!-- Ancho -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Anchuras (Width)</h2>
+        <div class="space-y-4">
+            <div class="w-full bg-blue-200 p-2">w-full</div>
+            <div class="w-1/2 bg-blue-300 p-2">w-1/2</div>
+            <div class="w-1/3 bg-blue-400 p-2">w-1/3</div>
+            <div class="w-1/4 bg-blue-500 p-2">w-1/4</div>
+            <div class="w-[300px] bg-blue-600 text-white p-2">w-[300px] (Arbitrario)</div>
+        </div>
+    </section>
+
+    <!-- Espaciado entre hijos -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Espaciado entre hijos (space-x)</h2>
+        <div class="flex space-x-4 bg-gray-200 p-4">
+            <div class="bg-white p-4">Hijo 1</div>
+            <div class="bg-white p-4">Hijo 2</div>
+            <div class="bg-white p-4">Hijo 3</div>
+        </div>
+    </section>
+
+    <!-- Bordes entre hijos -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Bordes entre hijos (divide-x)</h2>
+        <nav class="flex divide-x-2 divide-lime-500 divide-dotted border border-lime-500 inline-flex">
+            <span class="px-8 py-4">Inicio</span>
+            <span class="px-8 py-4">Acerca de</span>
+            <span class="px-8 py-4">Contacto</span>
+        </nav>
+    </section>
+
+    <!-- Ejemplo CARD -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Ejemplo Completo: Card</h2>
+
+        <!-- INICIO DE LA CARD -->
+        <div
+            class="w-full max-w-md mx-auto my-10 border-2 border-gray-300 bg-white py-7 px-5 rounded-2xl space-y-8 shadow-lg">
+            <!-- Imagen con placeholder -->
+            <img src="https://placehold.co/600x400/png" class="w-full h-60 object-cover rounded-md"
+                alt="Paisaje simulado">
+
+            <h3 class="text-3xl font-bold">¡Título Card!</h3>
+
+            <p class="text-gray-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga temporibus consectetur libero impedit
+                a
+                provident sed exercitationem, praesentium quam ea accusamus voluptatem unde?
+            </p>
+
+            <a href="#" class="block bg-blue-600 hover:bg-blue-700 text-white text-center py-4 rounded-full transition">
+                Leer más
+            </a>
+        </div>
+        <!-- FIN DE LA CARD -->
+
+    </section>
+
+</body>
+
+</html>
