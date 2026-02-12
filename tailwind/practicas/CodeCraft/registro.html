@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - CodeCraft</title>
+    <!-- Estilos compilados de Tailwind -->
+    <link rel="stylesheet" href="src/css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white antialiased flex flex-col min-h-screen">
+
+    <!-- Header (Simplificado para el formulario) -->
+    <header class="w-full h-16 border-b border-white/10 bg-black/80 backdrop-blur-md flex items-center">
+        <div class="container mx-auto px-6">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter hover:text-primary transition-colors flex items-center gap-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                CodeCraft
+            </a>
+        </div>
+    </header>
+
+    <!-- Registration Form Section -->
+    <main class="flex-grow flex items-center justify-center p-6 bg-black">
+        <div
+            class="w-full max-w-5xl flex flex-col md:flex-row bg-gray-900 rounded-3xl border border-white/10 shadow-2xl overflow-hidden min-h-[600px]">
+
+            <!-- Left Side: Image/Benefits (Desktop Only) -->
+            <div class="hidden md:flex md:w-1/2 relative bg-primary/10 p-12 flex-col justify-between overflow-hidden">
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/30 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl"></div>
+
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-extrabold text-white mb-6 leading-tight">Empieza a construir el <span
+                            class="text-primary">futuro</span> de la web.</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-300 text-sm">Acceso inmediato a más de 50 cursos técnicos
+                                especializados.</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-300 text-sm">Aprende a tu propio ritmo con proyectos prácticos reales.
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5V10a2 2 0 00-2-2h-3m-7 0H4a2 2 0 00-2 2v10h5m-1 0v-11a2 2 0 012-2h10a2 2 0 012 2v11m-7 14h4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-300 text-sm">Únete a una comunidad de expertos y recibe feedback
+                                constante.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="relative z-10 pt-12 border-t border-white/5">
+                    <p class="text-gray-500 text-xs uppercase tracking-widest mb-4">Certificaciones oficiales</p>
+                    <div class="flex gap-4 opacity-50 grayscale">
+                        <span class="font-bold text-lg">ISO-9001</span>
+                        <span class="font-bold text-lg">W3C</span>
+                        <span class="font-bold text-lg">EC-COUNCIL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="flex-1 p-8 md:p-16 flex flex-col justify-center bg-gray-900 relative">
+                <div class="max-w-md mx-auto w-full">
+                    <h1 class="text-3xl font-extrabold text-white mb-2">Crear cuenta</h1>
+                    <p class="text-gray-400 mb-10 text-sm">Completa tus datos para iniciar tu suscripción.</p>
+
+                    <form action="#" class="grid grid-cols-1 gap-6">
+                        <div class="space-y-2">
+                            <label for="name"
+                                class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Nombre
+                                Completo</label>
+                            <input type="text" id="name" required
+                                class="w-full px-5 py-4 bg-black border border-white/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-white placeholder-gray-700"
+                                placeholder="Escribe tu nombre">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="email"
+                                class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Correo
+                                Electrónico</label>
+                            <input type="email" id="email" required
+                                class="w-full px-5 py-4 bg-black border border-white/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-white placeholder-gray-700"
+                                placeholder="correo@ejemplo.com">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="password"
+                                class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Contraseña</label>
+                            <input type="password" id="password" required
+                                class="w-full px-5 py-4 bg-black border border-white/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-white placeholder-gray-700"
+                                placeholder="Mínimo 8 caracteres">
+                        </div>
+
+                        <div class="flex items-center space-x-3 group cursor-pointer">
+                            <input type="checkbox" id="terms" required
+                                class="w-5 h-5 rounded border-white/10 bg-black text-primary focus:ring-primary transition-all">
+                            <label for="terms" class="text-[10px] text-gray-500 leading-tight">Al registrarme, acepto
+                                los <a href="#" class="text-white hover:text-primary underline">Términos de Servicio</a>
+                                y la <a href="#" class="text-white hover:text-primary underline">Política de
+                                    Privacidad</a>.</label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-white text-black hover:bg-primary hover:text-white font-black rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-[1.02] uppercase tracking-widest text-sm">
+                            Empezar ahora
+                        </button>
+                    </form>
+
+                    <p class="mt-8 text-center text-sm text-gray-500 font-medium">
+                        ¿Ya formas parte de CodeCraft? <a href="#"
+                            class="text-white hover:text-primary font-bold">Inicia sesión</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="py-6 border-t border-white/10 text-center text-xs text-gray-600">
+        &copy; 2026 CodeCraft. Todos los derechos reservados.
+    </footer>
+
+</body>
+
+</html>
